@@ -10,7 +10,7 @@ This repository introduces and proves the **Çimen Constant ($Ç$)**, a mathemat
 
 The **Çimen Constant ($Ç$)** is an infinite series that evaluates the ratio of distinct prime factor excess to the quadratic density of composite integers:
 
-$$\Large Ç = \sum_{n \in \mathbb{C}} \frac{\omega(n) - 1}{n^2}$$
+$$\Large Ç = \sum_{n \in \mathbb{C}} \frac{\omega(n) - 1}{n^s}$$
 
 Where:
 - $n \in \mathbb{C}$ represents the set of all composite numbers $\{4, 6, 8, 9, 10, 12, \dots\}$.
@@ -35,9 +35,9 @@ The series converges remarkably fast, reaching a high degree of stability within
 The significance of the **Çimen Constant** lies in its perfect bridge between the distribution of all integers and the specific density of primes. It can be expressed using the **Riemann Zeta Function** and the **Prime Zeta Function**:
 
 ### The Identity:
-$$\Large Ç = \zeta(2) \cdot P(2) - (\zeta(2) - 1)$$
+$$\Large Ç = \zeta(s) \cdot P(s) - (\zeta(s) - 1)$$
 
-### Numerical Components:
+### Numerical Components for s=2:
 | Component | Function | Approximation |
 | :--- | :--- | :--- |
 | **Total Factor Load** | $\zeta(2) \cdot P(2)$ | $0.74391612...$ |
