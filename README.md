@@ -1,56 +1,113 @@
-# 🏛️ Observations on the Çimen Series and Dimensional Complexity
+ # 🔬 The Çimen(Ç)(CSK) Constant: Mapping Composite Complexity Load
+Author: Coşku Çimen
 
-This document presents a preliminary analysis of the relationship between **Prime Numbers** and **Composite Numbers**, exploring how "structural complexity" behaves across different dimensions, specifically comparing $s = -1$ and $s = 2$.
+
+This repository introduces and demonstrates the **Çimen(CSK) Constant ($Ç$)**, a mathematical value that quantifies the "excess prime information" or "compositional entropy" within composite numbers.
 
 ---
 
-## 1. Mathematical Framework
-The study focuses on the following series, which seeks to quantify the "excess complexity" in composite numbers:
+## 📐 Formal Definition
 
-$$Ç(s) = \sum_{n \in C} \frac{\omega(n)-1}{n^s}$$
+The **Çimen(CSK) Constant ($Ç$)** is an infinite series that evaluates the ratio of distinct prime factor excess to the quadratic density of composite integers:
+
+$$\Large Ç = \sum_{n \in \mathbb{C}} \frac{\omega(n) - 1}{n^s}$$
 
 Where:
-- **$C$**: The set of composite numbers.
-- **$\omega(n)$**: The number of distinct prime factors of $n$.
-- **$s$**: The dimensional parameter.
+- $n \in \mathbb{C}$ represents the set of all composite numbers $\{4, 6, 8, 9, 10, 12, \dots\}$.
+- $\omega(n)$ is the number of **distinct prime factors** of $n$.
+- The term $(\omega(n) - 1)$ represents the "non-primality" degree or the complexity load of $n$.
 
 ---
 
-## 2. Analysis of the Negative Dimension ($s = -1$)
-In the $s = -1$ domain, we observe how complexity scales as more prime factors interact. This dimension reveals the "unfiltered" growth of numerical noise.
+## 📊 Convergence Visualization
 
-### Case Study: The Emergence of Multi-Factor Complexity
-| Limit ($n$) | Factors ($\omega$) | Calculation $(\omega-1) \cdot n$ | Complexity Contribution |
-| :--- | :--- | :--- | :--- |
-| **$n=30$** | $2 \cdot 3 \cdot 5$ (3) | $(3-1) \cdot 30$ | **60** |
-| **$n=210$** | $2 \cdot 3 \cdot 5 \cdot 7$ (4) | $(4-1) \cdot 210$ | **630** |
+The series converges remarkably fast, reaching a high degree of stability within the first $10^5$ terms for s=2.
 
-**Observation:** As $n$ increases from 30 to 210 (a 7x increase), the complexity contribution increases 10.5x. This suggests that multi-prime interactions create a non-linear growth in the system's "noise."
+<div align="center">
+  <img src="graph.svg" alt="Çimen Constant Convergence Graph" width="600">
+  <p><i>Figure 1: Numerical convergence of S towards the analytical identity.</i></p>
+</div>
 
 ---
 
-## 3. Convergence in the Positive Dimension ($s = 2$)
-In contrast, when $s = 2$, these large complexity values are significantly dampened, leading to a potential convergence:
-> **Approximate Value: $Ç(2) \approx 0.098982...$**
+## 🏛 Analytical Identity & Proof
 
-### Potential Geometric Correlations
-Preliminary calculations suggest that this value may align with universal constants, though further rigorous proof is required:
-* **Relation to Pi:** $Ç(2) \approx \frac{\pi^2}{100}$
-* **Relation to the Golden Ratio:** $Ç(2) \approx \frac{\pi^2}{10 \cdot \phi^4}$
+The significance of the **Çimen(CSK) Constant** lies in its perfect bridge between the distribution of all integers and the specific density of primes. It can be expressed using the **Riemann Zeta Function** and the **Prime Zeta Function**:
 
-These correlations suggest a hidden symmetry where k-dimensional complexity is balanced by the inverse-square law of the $s=2$ dimension.
+### The Identity:
+$$\Large Ç = \zeta(s) \cdot P(s) - (\zeta(s) - 1)$$
 
----
+### Numerical Components for s=2:
+| Component | Function | Approximation |
+| :--- | :--- | :--- |
+| **Total Factor Load** | $\zeta(2) \cdot P(2)$ | $0.74391612...$ |
+| **Structural Bias** | $\zeta(2) - 1$ | $0.64493406...$ |
+| **Final Çimen Constant** | **$Ç$** | **$0.0989830984600784...$** |
 
-## 4. Discussion: Dimensional Purification
-Our observations suggest a "Purification Effect." While $n=210$ generates a large value (630) at $s=-1$, it contributes a negligible amount ($\approx 0.000068$) at $s=2$. 
 
-This leads us to propose that the **Çimen Constant** represents the equilibrium point where the inherent chaos of prime distribution is harmonized by geometric constraints.
 
 ---
+## Theoretical Implications (What does it demonstrate?)
 
-## 5. Preliminary Conclusion
-This exploration indicates that the distribution of numbers follows a rhythmic complexity. By shifting the perspective from $s=-1$ to $s=2$, we move from a state of expansion to a state of convergence. We invite further mathematical scrutiny to refine these observations into a formal proof.
+1. **Structural Characterization:** Demonstrates that the "noise" (composite 
+   factor complexity) in the number system converges to a characteristic value.
 
----
-*Documented for further research and collaborative analysis.*
+2. **Entropy of Composition:** Quantifies the total "deviation from primality" 
+   across the infinite number line.
+
+3. **Functional Linkage:** Demonstrates the relationship between the Riemann 
+   Zeta (ζ) and Prime Zeta (P) functions through analytical derivation.
+
+## 🌌 Generalization to Higher Dimensions ($s=3$)
+
+When we increase the power to $s=3$, we observe how the **Composite Complexity** decays in higher-dimensional mathematical spaces.
+
+### The $S_3$ Constant:
+$$\Large Ç_3 = \sum_{n \in \mathbb{C}} \frac{\omega(n) - 1}{n^3} \approx 0.008017$$
+
+### Comparison Table:
+- **2D Complexity ($s=2$):** $\approx 0.098983$
+- **3D Complexity ($s=3$):** $\approx 0.008017$ (A ~92% reduction in noise)
+
+This demonstrates that as the power $s$ increases, the influence of composite complexity vanishes, leaving only the "pure" prime structure of the number system.
+## 💻 Implementation for s=2
+
+```python
+def csk_v2(limit, s=2):
+    # ω(n) için lineer elek
+    omega = [0] * (limit + 1)
+    for i in range(2, limit + 1):
+        if omega[i] == 0:  # i asal
+            for j in range(i, limit + 1, i):
+                omega[j] += 1
+    
+    total = 0.0
+    for n in range(4, limit + 1):  # 4'ten başla (ilk composite)
+        if omega[n] >= 1:  # composite
+            total += (omega[n] - 1) / (n ** s)
+    return total
+print(csk_v2(10000000))
+
+# Result: 0.0989830984600784
+```
+## 🌌 Expansion to the Complex Plane
+
+The **CSK Function** can be analytically continued into the complex plane $s = \sigma + it$. This expansion links the complexity of composite numbers directly to the **critical strip** of the Riemann Hypothesis.
+
+### The Holomorphic Identity:
+$$Ç(s) = \zeta(s)P(s) - \zeta(s) + 1$$
+
+### Key Observations:
+- **Dimensional Stability:** As $\sigma \to \infty$, $S(s) \to 0$, proving that in "infinite dimensions," the number system is perfectly prime and noise-free.
+## Conclusion
+The CSK Constant demonstrates that the structural complexity of numbers is not chaotic; it is a calculated byproduct of prime distribution, governed by the deterministic structure of number theory.
+
+### 1. The "Static Noise" of Numbers
+ The **Ç-Constant** is the "leftover complexity" from the distribution of prime numbers. It represents the inevitable static noise that occurs when pure primes combine to form the infinite library of composite integers.
+
+
+###  Citation
+If you use the **Ç-Constant** or the **Ç-Function** in your research, please cite it as:
+> *Coşku Çimen, (2026). The Ç-Constant: A Structural Analysis of Composite Complexity. GitHub Repository: "https://github.com/helpforsoftware/The-Constant-of-Total-Composite-Complexity-"
+
+[Contact Me With Mail](mailto:helpforsoftware@gmail.com)
