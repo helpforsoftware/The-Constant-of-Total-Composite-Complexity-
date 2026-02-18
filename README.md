@@ -1,4 +1,4 @@
-# 🔬 The CSK Constant: Mapping Composite Complexity
+# 🔬 The CSK Constant: Mapping Composite Complexity(Coşku Çimen)
 
 This repository presents the formal definition and computational derivation of the **CSK Constant**, a mathematical value that quantifies the "prime information density" within composite numbers.
 
