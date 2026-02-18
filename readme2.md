@@ -3,6 +3,13 @@
 This document presents a preliminary analysis of the relationship between **Prime Numbers** and **Composite Numbers**, exploring how "structural complexity" behaves across different dimensions, specifically comparing $s = -1$ and $s = 2$.
 
 ---
+### What is the Purpose of This Research?
+
+We are observing three primary functions of this series:
+1. **Complexity Mapping:** By measuring $(\omega(n)-1)$, we are mapping the "structural entropy" of integers. This identifies where numerical noise peaks and fades.
+2. **Dimensional Filtering:** The Çimen Constant serves as a bridge between high-entropy states ($s=-1$) and low-entropy equilibrium ($s=2$).
+3. **Universal Harmonization:** The convergence toward $\pi$ and $\phi$ suggests that number theory is intrinsically linked to the fundamental geometry of the physical universe.
+---
 
 ## 1. Mathematical Framework
 The study focuses on the following series, which seeks to quantify the "excess complexity" in composite numbers:
