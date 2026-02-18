@@ -117,3 +117,5 @@ By defining this constant, we have moved one step closer to understanding the de
 ###  Citation
 If you use the **Ç-Constant** or the **Ç-Function** in your research, please cite it as:
 > *Coşku Çimen, (2026). The Ç-Constant: A Structural Analysis of Composite Complexity. GitHub Repository: "https://github.com/helpforsoftware/The-Constant-of-Total-Composite-Complexity-"
+
+[Contact Me With Mail](mailto:helpforsoftware@gmail.com)
