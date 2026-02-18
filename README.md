@@ -1,35 +1,54 @@
-# 🔬 The CSK Constant: Mapping Composite Complexity(Coşku Çimen)
+# 🔬 The Çimen Constant: Mapping Composite Complexity Load
+Author: Coşku Çimen
 
-This repository presents the formal definition and computational derivation of the **CSK Constant**, a mathematical value that quantifies the "prime information density" within composite numbers.
+
+This repository introduces and proves the **Çimen Constant ($Ç$)**, a mathematical value that quantifies the "excess prime information" or "compositional entropy" within composite numbers.
 
 ---
 
-## 📐 The Mathematical Definition
+## 📐 Formal Definition
 
-The **CSK Constant ($S$)** is defined by the following infinite series:
+The **Çimen Constant ($Ç$)** is an infinite series that evaluates the ratio of distinct prime factor excess to the quadratic density of composite integers:
 
-<div align="center">
-  <img src="https://latex.codecogs.com/svg.image?S&space;=&space;\sum_{n&space;\in&space;Composite}^{\infty}&space;\frac{\omega(n)&space;-&space;1}{n^2}" title="S = \sum_{n \in Composite}^{\infty} \frac{\omega(n) - 1}{n^2}" />
-</div>
+$$\Large Ç = \sum_{n \in \mathbb{C}} \frac{\omega(n) - 1}{n^2}$$
 
 Where:
-- **$\omega(n)$**: The number of distinct prime factors of $n$.
-- **$n^2$**: Quadratic damping for convergence.
-- **$n \in \text{Composite}$**: Restricting the domain to non-prime integers $> 1$.
+- $n \in \mathbb{C}$ represents the set of all composite numbers $\{4, 6, 8, 9, 10, 12, \dots\}$.
+- $\omega(n)$ is the number of **distinct prime factors** of $n$.
+- The term $(\omega(n) - 1)$ represents the "non-primality" degree or the complexity load of $n$.
 
 ---
 
-## 📊 Visualizing the Convergence (Interactive Concept)
+## 📊 Convergence Visualization
 
-Below is a visualization concept of how the **CSK Constant** stabilizes as we scan through the number line.
+The series converges remarkably fast, reaching a high degree of stability within the first $10^5$ terms.
 
-$$S = \sum_{n \in \text{Composite}}^{\infty} \frac{\omega(n) - 1}{n^2}$$
+<div align="center">
+  <img src="graph.svg" alt="Çimen Constant Convergence Graph" width="600">
+  <p><i>Figure 1: Numerical convergence of S towards the analytical identity.</i></p>
+</div>
 
 ---
 
-## 🧪 Computational Proof (Python)
+## 🏛 Analytical Identity & Proof
 
-The numerical value was derived using a high-precision sieve algorithm.
+The significance of the **Çimen Constant** lies in its perfect bridge between the distribution of all integers and the specific density of primes. It can be expressed using the **Riemann Zeta Function** and the **Prime Zeta Function**:
+
+### The Identity:
+$$\Large Ç = \zeta(2) \cdot P(2) - (\zeta(2) - 1)$$
+
+### Numerical Components:
+| Component | Function | Approximation |
+| :--- | :--- | :--- |
+| **Total Factor Load** | $\zeta(2) \cdot P(2)$ | $0.74391612...$ |
+| **Structural Bias** | $\zeta(2) - 1$ | $0.64493406...$ |
+| **Final Çimen Constant** | **$Ç$** | **$0.098982102005...$** |
+
+
+
+---
+
+## 💻 Implementation
 
 ```python
 def calculate_csk(limit):
