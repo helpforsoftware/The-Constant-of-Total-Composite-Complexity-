@@ -2,7 +2,7 @@
 Author: Coşku Çimen
 
 
-This repository introduces and proves the **Çimen(CSK) Constant ($Ç$)**, a mathematical value that quantifies the "excess prime information" or "compositional entropy" within composite numbers.
+This repository introduces and demonstrates the **Çimen(CSK) Constant ($Ç$)**, a mathematical value that quantifies the "excess prime information" or "compositional entropy" within composite numbers.
 
 ---
 
@@ -47,11 +47,17 @@ $$\Large Ç = \zeta(s) \cdot P(s) - (\zeta(s) - 1)$$
 
 
 ---
-## Theoretical Implications (What does it prove?)
+## Theoretical Implications (What does it demonstrate?)
 
-1. **Structural Determinism:** Proves that the "noise" (composite factor complexity) in the number system converges to a fixed universal ratio.
-2. **Entropy of Composition:** Quantifies the total "deviation from primality" across the infinite number line.
-3. **Functional Linkage:** Validates the deterministic bridge between the Riemann Zeta ($\zeta$) and Prime Zeta ($P$) functions through experimental summation.
+1. **Structural Characterization:** Demonstrates that the "noise" (composite 
+   factor complexity) in the number system converges to a characteristic value.
+
+2. **Entropy of Composition:** Quantifies the total "deviation from primality" 
+   across the infinite number line.
+
+3. **Functional Linkage:** Demonstrates the relationship between the Riemann 
+   Zeta (ζ) and Prime Zeta (P) functions through analytical derivation.
+
 ## 🌌 Generalization to Higher Dimensions ($s=3$)
 
 When we increase the power to $s=3$, we observe how the **Composite Complexity** decays in higher-dimensional mathematical spaces.
@@ -63,7 +69,7 @@ $$\Large Ç_3 = \sum_{n \in \mathbb{C}} \frac{\omega(n) - 1}{n^3} \approx 0.0080
 - **2D Complexity ($s=2$):** $\approx 0.098983$
 - **3D Complexity ($s=3$):** $\approx 0.008017$ (A ~92% reduction in noise)
 
-This proves that as the power $s$ increases, the influence of composite complexity vanishes, leaving only the "pure" prime structure of the number system.
+This demonstrates that as the power $s$ increases, the influence of composite complexity vanishes, leaving only the "pure" prime structure of the number system.
 ## 💻 Implementation for s=2
 
 ```python
@@ -94,10 +100,10 @@ $$Ç(s) = \zeta(s)P(s) - \zeta(s) + 1$$
 ### Key Observations:
 - **Dimensional Stability:** As $\sigma \to \infty$, $S(s) \to 0$, proving that in "infinite dimensions," the number system is perfectly prime and noise-free.
 ## Conclusion
-The CSK Constant proves that the structural complexity of numbers is not chaotic; it is a calculated byproduct of prime distribution, fixed by the same laws that govern the fundamental constants of the universe.=
+The CSK Constant demonstrates that the structural complexity of numbers is not chaotic; it is a calculated byproduct of prime distribution, governed by the deterministic structure of number theory.
 
 ### 1. The "Static Noise" of Numbers
- the **Ç-Constant** is the "leftover complexity" from the distribution of prime numbers. It represents the inevitable static noise that occurs when pure primes combine to form the infinite library of composite integers.
+ The **Ç-Constant** is the "leftover complexity" from the distribution of prime numbers. It represents the inevitable static noise that occurs when pure primes combine to form the infinite library of composite integers.
 
 
 ###  Citation
