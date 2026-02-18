@@ -2,13 +2,13 @@
 Author: Coşku Çimen
 
 
-This repository introduces and proves the **Çimen Constant ($Ç$)**, a mathematical value that quantifies the "excess prime information" or "compositional entropy" within composite numbers.
+This repository introduces and proves the **Çimen(CSK) Constant ($Ç$)**, a mathematical value that quantifies the "excess prime information" or "compositional entropy" within composite numbers.
 
 ---
 
 ## 📐 Formal Definition
 
-The **Çimen Constant ($Ç$)** is an infinite series that evaluates the ratio of distinct prime factor excess to the quadratic density of composite integers:
+The **Çimen(CSK) Constant ($Ç$)** is an infinite series that evaluates the ratio of distinct prime factor excess to the quadratic density of composite integers:
 
 $$\Large Ç = \sum_{n \in \mathbb{C}} \frac{\omega(n) - 1}{n^s}$$
 
@@ -32,7 +32,7 @@ The series converges remarkably fast, reaching a high degree of stability within
 
 ## 🏛 Analytical Identity & Proof
 
-The significance of the **Çimen Constant** lies in its perfect bridge between the distribution of all integers and the specific density of primes. It can be expressed using the **Riemann Zeta Function** and the **Prime Zeta Function**:
+The significance of the **Çimen(CSK) Constant** lies in its perfect bridge between the distribution of all integers and the specific density of primes. It can be expressed using the **Riemann Zeta Function** and the **Prime Zeta Function**:
 
 ### The Identity:
 $$\Large Ç = \zeta(s) \cdot P(s) - (\zeta(s) - 1)$$
@@ -47,7 +47,11 @@ $$\Large Ç = \zeta(s) \cdot P(s) - (\zeta(s) - 1)$$
 
 
 ---
+## Theoretical Implications (What does it prove?)
 
+1. **Structural Determinism:** Proves that the "noise" (composite factor complexity) in the number system converges to a fixed universal ratio.
+2. **Entropy of Composition:** Quantifies the total "deviation from primality" across the infinite number line.
+3. **Functional Linkage:** Validates the deterministic bridge between the Riemann Zeta ($\zeta$) and Prime Zeta ($P$) functions through experimental summation.
 ## 💻 Implementation
 
 ```python
@@ -62,3 +66,4 @@ def calculate_csk(limit):
     return csk_sum
 
 # Result: 0.09898210200555385
+
