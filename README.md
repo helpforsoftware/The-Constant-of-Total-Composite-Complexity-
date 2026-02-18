@@ -23,20 +23,7 @@ Where:
 
 Below is a visualization concept of how the **CSK Constant** stabilizes as we scan through the number line.
 
-<div align="center">
-  <svg width="600" height="200" viewBox="0 0 600 200" style="background-color:#f9f9f9; border-radius:8px;">
-    <line x1="50" y1="170" x2="550" y2="170" stroke="#333" stroke-width="2" />
-    <line x1="50" y1="170" x2="50" y2="30" stroke="#333" stroke-width="2" />
-    
-    <path d="M 50 170 Q 150 50, 550 60" fill="none" stroke="#2196F3" stroke-width="3" />
-    
-    <line x1="50" y1="60" x2="550" y2="60" stroke="#f44336" stroke-dasharray="5,5" />
-    
-    <text x="560" y="65" font-family="Arial" font-size="12" fill="#f44336">0.09898...</text>
-    <text x="250" y="190" font-family="Arial" font-size="12" fill="#333">Limit (n → ∞)</text>
-    <text x="10" y="100" font-family="Arial" font-size="12" fill="#333" transform="rotate(-90, 20, 100)">Sum Value</text>
-  </svg>
-</div>
+$$S = \sum_{n \in \text{Composite}}^{\infty} \frac{\omega(n) - 1}{n^2}$$
 
 ---
 
